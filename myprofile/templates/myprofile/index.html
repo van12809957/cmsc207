@@ -1,0 +1,101 @@
+{% extends "myprofile/base.html" %}
+{% load static %}
+{% block content %}
+<section>
+  <h2>Hello there!</h2>
+  <p>
+    <img class="large" src="{% static 'myprofile/sweden_van.png' %}" alt="Picture of Van in Sweden">
+  </p>
+  <p>Hello! You can call me Van. I used to study in a social science field but decided to career shift a few years
+    ago. Now, I am taking the Diploma in Computer Science program in UP Open University to make myself more
+    competitive in job applications.
+  </p>
+  <p>
+    I am currently in my last semester! Hopefully, I will be able to graduate soon and be able to gain better projects
+    with the help of this diploma.
+    My picture was taken this year in Sweden where I recently got married. The cold pierces through your clothes but I
+    love it! Better than sweating all day.
+  </p>
+  <button onclick="toggleTextView()">Click to view more fun facts</button>
+  <div id="funFactText">
+    <p>Some additional fun facts about me:</p>
+    <ul>
+      <li>I love desserts! Whether it be cake, ice cream, or cookie-related, I get excited trying it out. It helps
+        after a long day at work.</li>
+      <li>I am previously an academic overachiever during college. I even pursued graduate school before and had an
+        academic career. However, after gaining more experience in the industry, seeing the academic culture, and
+        getting to view perspectives beyond the academic community, I now consider myself as more realistic. Some may
+        call it being disillusioned. Rather than seeing it as a negative thing, I believe that it is an important part
+        of my growth.</li>
+      <li>I used to play around with CSS and HTML code back when Friendster was still a thing! Some of the parts
+        of HTML code was still familiar to me. Unfortunately, CSS and JavaScript is not my strong suit. Luckily, the
+        assigned reading
+        provided us with sample code that we may use to build upon and customize our page.</li>
+    </ul>
+  </div>
+  <br>
+  <br>
+</section>
+
+<section>
+  <h2>Hobbies & Interests</h2>
+
+  <div class="container">
+    <div class="item-icon" onmouseover="showImageText(this)" onmouseout="hideImageText(this)">
+      <img class="small" onclick="expandImageMedium(this)" src="{% static 'myprofile/tennis.png' %}"
+        alt="Person playing tennis">
+      <span class="hover-text">Click to adjust image size</span>
+    </div>
+    <div class="item-content">
+      Although I consider myself as a not so sporty kind of guy, I do enjoy trying out sports that are less in
+      contact. Recently, I tried out table tennis, pickleball, badminton, and tennis. Tennis almost destroyed my lungs
+      with all the running.
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="item-icon" onmouseover="showImageText(this)" onmouseout="hideImageText(this)">
+      <img class="small" onclick="expandImageMedium(this)" src="{% static 'myprofile/marvelrivals.jpg' %}"
+        alt="Screenshot of Invisible Woman in Marvel Rivals">
+      <span class="hover-text">Click to adjust image size</span>
+    </div>
+    <div class="item-content">
+      I enjoy playing PC games. Recently, I am into Marvel Rivals.
+      I enjoy when I can help in healing my teammates so we can push the objective.
+      However, I do not enjoy the competitive trash talking side of the game. Such needless aggression!
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="item-icon" onmouseover="showImageText(this)" onmouseout="hideImageText(this)">
+      <img class="small" onclick="expandImageMedium(this)" src="{% static 'myprofile/cocktail.png' %}"
+        alt="Cocktail drink with a small corn cob on top">
+      <span class="hover-text">Click to adjust image size</span>
+    </div>
+    <div class="item-content">
+      I love to try out different cocktail drinks. If I have time, I will try out mixing my own cocktails.
+      If I feel like treating myself, I go out and check cocktails in a new bar.
+      This picture was taken in a speakeasy themed bar in BGC.
+    </div>
+  </div>
+  <br>
+</section>
+
+<section>
+  <h2>Contact Info</h2>
+  <p>You may reach me through my email at <a href="mailto:vhfaeldon@up.edu.ph">vhfaeldon@up.edu.ph</a>.</p>
+  <p>I am not active in social media. I mostly utilize it in cases where I need to contact business pages. However, feel
+    free to send me a connection request to my
+    <a href="https://www.linkedin.com/in/vanfaeldon/" target="_blank" title="LinkedIn"><span
+        class="linkedin-logo"></span>LinkedIn</a>
+  </p>
+  <p>For reference, here are my inactive social media accounts:</p>
+  <ul>
+    <li><a href="https://www.facebook.com/van.faeldon.75" target="_blank" title="Facebook"><span
+          class="facebook-logo"></span>Facebook</a></li>
+    <li><a href="https://x.com/vanfaeldon" target="_blank" title="Twitter"><span class="twitter-logo"></span>Twitter</a>
+    </li>
+  </ul>
+</section>
+
+{% endblock %}

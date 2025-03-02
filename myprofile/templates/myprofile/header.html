@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Van Faeldon's World</title>
+  {% load static %}
+  <link type="text/css" rel="stylesheet" href="{% static 'myprofile/main.css' %}" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Van Faeldon's World</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'myprofile:index' %}">About Me</a></li>
+        <li><a href="{% url 'myprofile:notes' %}">Notes</a></li>
+      </ul>
+    </nav>
+  </header>
